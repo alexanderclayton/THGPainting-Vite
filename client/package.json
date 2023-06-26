@@ -1,0 +1,12 @@
+{
+  "name": "thgclient",
+  "version": "1.0.0",
+  "description": "thgclient",
+  "main": "main.jsx",
+  "scripts": {
+    "dev": "vite",
+    "test": "jest"
+  },
+  "author": "Alex Clayton",
+  "license": "ISC"
+}

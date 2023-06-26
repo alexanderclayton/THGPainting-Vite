@@ -1,0 +1,21 @@
+{
+  "name": "thgserver",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "thgserver",
+  "main": "server.js",
+  "scripts": {
+    "test": "jest",
+    "start": "node server.js"
+  },
+  "author": "Alex Clayton",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-server-express": "^3.12.0",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.0",
+    "mongoose": "^7.3.1",
+    "path": "^0.12.7"
+  }
+}
