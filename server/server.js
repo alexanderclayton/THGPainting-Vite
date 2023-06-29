@@ -9,6 +9,8 @@ import cors from 'cors';
 import bodyParser from 'body-parser';
 import resolvers from './schemas/resolvers.js';
 import typeDefs from './schemas/typeDefs.js';
+import { authMiddleware } from './utils/authMiddleware.js';
+import { clientMiddleware } from './utils/clientMiddleware.js';
 
 mongoose.set('strictQuery', false);
 
@@ -40,7 +42,7 @@ const startApolloServer = async () => {
         cors(),
         bodyParser.json({ limit: '50mb' }),
         expressMiddleware(server, {
-            context: async ({ req }) => ({ token: req.headers.token }),
+            context: authMiddleware, clientMiddleware,
         }),
     );
 
