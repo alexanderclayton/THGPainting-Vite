@@ -46,7 +46,6 @@ const startApolloServer = async () => {
 
     await new Promise((resolve) => httpServer.listen({ port: API_PORT }, resolve));
     console.log(`API server running on port ${API_PORT}`);
-    console.log(httpServer)
 }
 
 startApolloServer();
