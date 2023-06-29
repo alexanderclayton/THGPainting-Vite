@@ -1,0 +1,22 @@
+{
+  "name": "thgserver",
+  "version": "1.0.0",
+  "description": "thgserver",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alex Clayton",
+  "license": "ISC",
+  "dependencies": {
+    "@apollo/server": "^4.7.5",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "graphql": "^16.7.1",
+    "graphql-tag": "^2.12.6"
+  }
+}
