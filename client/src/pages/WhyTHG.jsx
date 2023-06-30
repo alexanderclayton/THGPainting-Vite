@@ -1,6 +1,6 @@
 const WhyTHG = () => {
     return (
-        <p>Why THG? text here</p>
+        <p className="text-content">Why THG? text here</p>
     )
 }
 
