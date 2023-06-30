@@ -1,0 +1,76 @@
+:root {
+    --gold: rgb(206, 186, 72);
+    --white: white;
+    --charcoal: rgb(42, 41, 41);
+}
+
+body {
+    background-color: var(--charcoal);
+    
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar-list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 85%;
+    list-style: none;
+}
+
+.navbar-link {
+    color: var(--gold);
+    text-decoration: none;
+}
+
+.navbar-link:hover {
+    color: red;
+    cursor: pointer;
+}
+
+.btn {
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+}
+
+.btn:hover {
+    cursor: pointer;
+    transition-duration: 0.4s;
+}
+
+.login-btn {
+    background-color: var(--white);
+    border: 2px solid var(--gold);
+    font: inherit;
+    color: inherit;
+    text-decoration: inherit;
+}
+
+.login-btn:hover {
+    color: var(--white);
+    background-color: var(--gold);
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-link {
+    color: var(--gold);
+    text-decoration: none;
+}
+
+.text-content {
+    color: var(--gold)
+}
+
+.footer {
+    color: var(--gold);
+    font-size: small; 
+}
