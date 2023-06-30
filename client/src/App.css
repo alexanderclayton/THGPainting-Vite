@@ -2,75 +2,132 @@
     --gold: rgb(206, 186, 72);
     --white: white;
     --charcoal: rgb(42, 41, 41);
-}
-
-body {
+    --light-charcoal: rgb(81, 81, 81);
+  }
+  
+  body {
     background-color: var(--charcoal);
-    
-}
+    margin: 0;
+  }
 
-.navbar {
+  .text-content {
+    color: var(--gold)
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+  
+  .navbar {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-}
-
-.navbar-list {
+    width: 85%;
+  }
+  
+  .navbar-list {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 85%;
     list-style: none;
-}
-
-.navbar-link {
+    width: 100%
+  }
+  
+  .navbar-link {
     color: var(--gold);
     text-decoration: none;
-}
-
-.navbar-link:hover {
-    color: red;
-    cursor: pointer;
-}
-
-.btn {
+  }
+  
+  .btn {
     border-radius: 0.5rem;
     padding: 0.5rem;
-}
-
-.btn:hover {
+  }
+  
+  .btn:hover {
     cursor: pointer;
     transition-duration: 0.4s;
-}
-
-.login-btn {
-    background-color: var(--white);
+  }
+  
+  .login-btn {
+    background-color: var(--light-charcoal);
     border: 2px solid var(--gold);
-    font: inherit;
-    color: inherit;
+    color: var(--gold);
     text-decoration: inherit;
-}
-
-.login-btn:hover {
+  }
+  
+  .login-btn:hover {
     color: var(--white);
     background-color: var(--gold);
-}
-
-.sidebar {
+  }
+  
+  .menu-btn {
+    display: none;
+    visibility: hidden;
+    background-color: var(--light-charcoal);
+    border: 2px solid var(--gold);
+  }
+  
+  .sidebar {
     display: flex;
     flex-direction: column;
-}
-
-.sidebar-link {
+  }
+  
+  .sidebar-link {
     color: var(--gold);
     text-decoration: none;
-}
+  }
 
-.text-content {
-    color: var(--gold)
-}
+  .login-form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
 
-.footer {
+  .login-label {
+    padding: 0.5rem;
+  }
+  
+  .footer {
     color: var(--gold);
     font-size: small; 
-}
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .navbar {
+      position: relative;
+    }
+  
+    .navbar-list {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background-color: var(--charcoal);
+      padding: 1rem;
+      flex-direction: column;
+    }
+  
+    .navbar-list li {
+      display: block;
+      margin-bottom: 1rem;
+    }
+  
+    .menu-btn {
+      display: block;
+      visibility: visible;
+      z-index: 2;
+    }
+  
+    .menu-close-btn {
+      display: block;
+      visibility: visible;
+    }
+  
+    .display-navbar .navbar-list {
+      display: flex;
+      z-index: 1;
+    }
+  }
+  
