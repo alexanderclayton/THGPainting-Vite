@@ -29,8 +29,9 @@ const Header = () => {
   return (
     <header className="header">
       <img src={logo} alt="thg logo filler" />
-      <nav ref={navRef} className={`navbar ${isNavbarOpen ? 'display-navbar' : ''}`}>
-        <ul className="navbar-list">
+      <nav ref={navRef}
+      className={`navbar ${isNavbarOpen ? 'display-navbar' : ''}`}>
+        <ul className="navbar-list" style={{ border: isNavbarOpen ? '2px solid rgb(206, 186, 72)' : 'none' }}>
           <li><Link className="navbar-link" to="/" onClick={closeNavbar}>Home</Link></li>
           <li><Link className="navbar-link" to="/about" onClick={closeNavbar}>About Us</Link></li>
           <li><Link className="navbar-link" to="/why-thg" onClick={closeNavbar}>Why THG?</Link></li>

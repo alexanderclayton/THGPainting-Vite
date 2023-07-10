@@ -49,7 +49,7 @@ const Login = () => {
         <input type="password" {...register('password')} />
         {errors.password && <span>{errors.password.message}</span>}
       </div>
-      <button className="btn login-btn" type="submit">Login</button>
+      <button className="btn login-btn submit-lgn-btn" type="submit">Login</button>
     </form>
   );
 };
