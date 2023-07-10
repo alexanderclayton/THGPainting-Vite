@@ -7,7 +7,8 @@
 
 body {
   background-color: var(--charcoal);
-  margin: 0;
+  margin: 1rem;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .text-content {
@@ -37,8 +38,15 @@ body {
 .navbar-link {
   color: var(--gold);
   text-decoration: none;
-  font-size: 2rem;
+  font-size: 1.5rem;
   line-height: 4rem;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+}
+
+.navbar-link:hover {
+  background: var(--light-charcoal);
+  transition-duration: 0.4s;
 }
 
 .btn {
@@ -56,6 +64,7 @@ body {
 
 .login-btn {
   text-decoration: inherit;
+  font-size: 1rem;
 }
 
 .login-btn:hover {
@@ -117,6 +126,30 @@ input[type="password"] {
   font-size: 1.5rem;
   font-weight: bold;
   margin-bottom: 1rem;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact {
+  display: flex;
+  align-items: center;
+  color: var(--gold)
+}
+
+.contact a {
+  margin-left: 1rem;
+  text-decoration: none;
+  color: var(--gold);
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.contact a:hover {
+  background-color: var(--light-charcoal);
+  transition: 0.4s;
 }
 
 .all-project-card {
@@ -191,7 +224,7 @@ input[type="password"] {
   font-size: small;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 833px) {
   .navbar {
     position: relative;
   }

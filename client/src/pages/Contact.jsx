@@ -1,6 +1,12 @@
 const Contact = () => {
     return (
-        <p className="text-content">Contact information here</p>
+        <div className="contact-info">
+            <p className="text-content">Contact information here</p>
+            <div className="contact">
+                <p>Email:</p>
+                <a href="mailto:firecbt@gmail.com">firecbt@gmail.com</a>
+            </div>
+        </div>
     )
 }
 
