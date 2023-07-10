@@ -26,18 +26,18 @@ const AllClients = () => {
     return (
         <div className="all-clients">
             <Sidebar />
-            <div className="bg-red-700">
-                <p>All Clients</p>
+            <div>
+                <p className="text-content">All Clients</p>
                 {data.getClients.map(client => (
-                    <Link to={`client/${client.id}`} className="client-card" key={client.id}>
-                        <p>{client.name}</p>
-                        <p>{client.address}</p>
-                        <p>{client.email}</p>
-                        <p>{client.phoneNumber}</p>
+                    <Link to={`client/${client.id}`} className="all-client-card" key={client.id}>
+                        <p className="client-name">{client.name}</p>
+                        <p className="client-address">{client.address}</p>
+                        <p className="client-email">{client.email}</p>
+                        <p className="client-phone">{client.phoneNumber}</p>
                     </Link>
                 ))}
                 {showForm && <AddClient onFormSubmit={handleFormSubmit} />}
-                <button onClick={() => setShowForm(!showForm)}>
+                <button className="btn" onClick={() => setShowForm(!showForm)}>
                     {showForm ? 'cancel' : 'Add Client'}
                 </button>
             </div>

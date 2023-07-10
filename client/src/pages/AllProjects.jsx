@@ -15,15 +15,15 @@ const AllProjects = () => {
         <div className="all-projects">
             <Sidebar />
             <div>
-                <p>All Projects</p>
+                <p className="text-content">All Projects</p>
                 {data.getProjects.map(project => (
-                    <Link to={`project/${project.id}`} className='all-project-card' key={project.id}>
-                        <p>{project.description}</p>
-                        <p>{project.startDate}</p>
-                        <p>{project.endDate}</p>
-                        <p>{project.projectType}</p>
-                        <p>{project.paid}</p>
-                        <p>{project.paymentType}</p>
+                    <Link to={`project/${project.id}`} className="all-project-card" key={project.id}>
+                        <p className="project-description">{project.description}</p>
+                        <p className="project-start">{project.startDate}</p>
+                        <p className="project-end">{project.endDate}</p>
+                        <p classname="project-type">{project.projectType}</p>
+                        <p className="project-paid">{project.paid}</p>
+                        <p className="project-payment-type">{project.paymentType}</p>
                     </Link>
                 ))}
             </div>

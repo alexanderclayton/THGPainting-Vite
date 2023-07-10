@@ -5,7 +5,7 @@ const Userpage = () => {
     return (
         <div className="userpage">
             <Sidebar className="sidebar"/>
-            <p>Userpage</p>
+            <p className="text-content">Userpage</p>
         </div>
     )
 }

@@ -38,18 +38,18 @@ const Login = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
+    <form className="login-form" onSubmit={handleSubmit(onSubmit)}>
       <div>
-        <label>Email:</label>
+        <label className="login-label text-content">Email:</label>
         <input type="email" {...register('email')} />
         {errors.email && <span>{errors.email.message}</span>}
       </div>
       <div>
-        <label>Password:</label>
+        <label className="login-label text-content">Password:</label>
         <input type="password" {...register('password')} />
         {errors.password && <span>{errors.password.message}</span>}
       </div>
-      <button type="submit">Login</button>
+      <button className="btn login-btn submit-lgn-btn" type="submit">Login</button>
     </form>
   );
 };
