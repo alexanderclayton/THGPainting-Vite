@@ -8,13 +8,12 @@ import { clientMiddleware } from './utils/clientMiddleware.js';
 import db from './config/connection.js';
 
 const __dirname = path.resolve();
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 5174;
 const app = express();
 
 const server = new ApolloServer({
     typeDefs,
     resolvers,
-    context: authMiddleware, clientMiddleware,
 });
 
 console.log("dirname:", __dirname);
@@ -42,7 +41,8 @@ const startApolloServer = async () => {
     db.once('open', () => {
         app.listen(PORT, () => {
             console.log(`API server running on port ${PORT}`);
-            console.log(`Use GraphQL at http://localhost:${PORT}${server.graphqlPath}`);
+            console.log(`Use GraphQL at http://127.0.0.1:${PORT}${server.graphqlPath}`);
+            console.log(server)
         });
     });
 };

@@ -22,14 +22,16 @@ const Login = () => {
     if (error) return <p>{error.message}</p>
 
     const onSubmit = async (values) => {
-        console.log(values)
+        console.log('values:', values)
+        console.log("login:", login)
         try {
             const { data } = await login({ 
                 variables: { ...values }, 
             });
+            
 
             authServiceInstance.login(data.login.token);
-            // window.location.replace('/userpage');
+            window.location.replace('/userpage');
         } catch (error) {
             console.error('Error logging in:', error)
         }
